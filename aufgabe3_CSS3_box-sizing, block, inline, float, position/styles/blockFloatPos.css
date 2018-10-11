@@ -1,0 +1,86 @@
+/*
+Einheiten und Farben:
+Alle Farben legen Sie bitte mit der Funktion hsla() oder rgba() an.
+Verwenden Sie nur relative Einheiten, außer für:
+padding, Grundgrößen Schrift, maximale oder minimale Größen.
+*/
+
+/*Erklären Sie kurz, was die Eigenschaft box-sizing bewirkt. Auf welche anderen properties hat es eine Auswirkung?*/
+
+/*Verwenden Sie den Wert border-box für box-sizing.*/
+
+
+
+/*reset*/
+
+
+/*
+Arrangieren Sie die Links nebeneinander über die Eigenschaft display: block|inline|inline-block
+Nehmen Sie für jedes <li> die größtmögliche Breite ein und verteilen Sie sie gleichmäßig über die gesamte Breite.
+Geben Sie eine Hintergrundfarbe für die <li> und runden Sie die rechte obere Ecke leicht ab.
+*/
+
+
+
+/*
+Legen Sie dasselbe Arrangement für die <li> fest, diesmal mit der Eigenschaft float.
+*/
+
+/*
+<img> sind inline-Elemente. Grundsätzlich können inline-Elemente keine Größenangaben annehmen.
+Warum geht das bei <img> aber doch?
+*/
+
+/*
+position:
+Welche Werte gibt es, was bewirken sie? 
+Erklären Sie kurz Wirkungsweise und Bezugspunkt.
+*/
+
+/*
+Ergänzen Sie das HTML-Dokument wie folgt:
+Jedes Blumenbild bekommt einen dazugehörigen Text mit dem Namen der Blume.
+Welches Element würden Sie verwenden? Warum?
+*/
+
+/*
+Verwenden Sie für den Blumennamen das Element <span>.
+Positionieren Sie Bild und Text übereinander,
+der Text befindet sich auf dem Bild am unteren Rand, schließt bündig ab und hat einen halbtransparenten Hintergrund.
+Möglicherweise benötigen Sie weitere Elemente im HTML-Dokument.
+Platzieren Sie jeweils zwei Bilder mit Text nebeneinander, über die größtmögliche Breite.
+*/
+
+
+
+/*
+Ist es möglich für alle Bilder die gleich Höhe zu erzwingen?
+*/
+
+
+/*
+Legen Sie jeweils zwei Textabsätze mit Überschrift nebeneinander, in der größtmöglichen Breite.
+Verwenden Sie einmal display, und einmal float.
+Grenzen Sie die Texte durch Hintergrundfarben voneinander ab.
+Wie sieht es hier mit der Höhe aus?
+*/
+
+/*
+Fixieren Sie die Navigation oben.
+Verwenden Sie einmal den Wert fixed und einmal den Wert sticky.
+*/
+
+
+
+/*
+Schreiben Sie ein media-Query für größere Auflösungen ab 1000px:
+Es passen jetzt drei Bilder nebeneinander.
+*/
+
+
+/*
+Schreiben Sie ein weiteres media-Query für größere Auflösungen ab 1200px:
+Der Body nimmt eine relative Breite von 85% ein und wird nicht größer als 1280px.
+Er ist mittig plaziert.
+Es passen immer noch drei Bilder und zwei Texte nebeneinander.
+*/
