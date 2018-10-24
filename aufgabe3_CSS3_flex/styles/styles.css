@@ -98,3 +98,39 @@ section:nth-child(2) article h3+p {
         width: 100%;
     }
 }
+
+/* Media-Query - Mittlere Auflösung */
+@media (max-width: 1024px) {
+    img {
+        width: 32%;
+        height: 32%;
+    }
+
+    section:nth-child(2) article {
+        width: 100%;
+    }
+}
+
+/* Media-Query - kleine Auflösung */
+@media (max-width: 800px) {
+    ul {
+        flex-wrap: wrap;
+    }
+
+    li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 47%;
+        margin: 5px 5px 0;
+    }
+
+    li a {
+        padding: 20px;
+    }
+    
+    img {
+        width: 49%;
+        height: 49%;
+    }
+}
