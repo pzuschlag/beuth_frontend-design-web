@@ -11,7 +11,7 @@ Die Eigenschaft box-sizing wird verwendet, um das Standard CSS Boxmodell zu ver�
 Das Boxmodell wird dazu verwendet um Breiten und Höhen von Elementen zu berechnen.
 Werte:  * content-box
         > Dies ist der Default-Wert. Die Eigenschaften Breite und Höhe ergben sich hierbei allein aus den Angaben des
-          Elements, border, margin und padding werden hierbei nicht berücksichctig.
+          Elements, border, margin und padding werden hierbei nicht berücksichtigt.
           
         * border-box
         > Die Angaben für Höhe und Breite berücksichtigen hierbei auch die Werte für padding und border, die Angaben
@@ -40,12 +40,13 @@ Geben Sie eine Hintergrundfarbe für die <li> und runden Sie die rechte obere Ec
 */
 ul {
     text-align:center;
+    list-style: none;
 }
 
 li:not(:first-child)  {
     display: inline-block;
     background-color: rgba(255, 127, 80);
-    border-radius: 0 1em 0 0;
+    border-radius: 0 20px 0 0;
     width: 16%;
     margin: 20px 0;
     padding: 10px;
@@ -61,11 +62,15 @@ Legen Sie dasselbe Arrangement für die <li> fest, diesmal mit der Eigenschaft f
 li:not(:first-child)  {
     float: left;
     background-color: rgba(255, 127, 80);
-    border-radius: 0 1em 0 0;
+    border-radius: 0 20px 0 0;
     width: 16%;
     margin: 20px 2px;
     padding: 10px;
     list-style: none;
+}
+
+main {
+    clear: both;
 } */
 
 /*
@@ -96,9 +101,9 @@ Position:   * static
               sich am Viewport. Das Element wird aus dem normalen Fluss gelöst und bleibt auch beim Scrollen an seiner fest
               definierten Position.
             * absolute
-            > Absolute position im relativen Context. Das Element wird aus dem normalen Fluss gelöst und unabhängig verschoben.
-              Dabei können andere Elemente verdeckt werden. Diese verhalten sich so, als ob das Element nicht vorhanden wäre
-              und lassen keinen Platz für das Element. 
+            > Absolute position im relativen Context, abhänig vom nächste Vorfahren der nicht Static ist. Wenn es keinen gibt,
+              ist es Body. Das Element wird aus dem normalen Fluss gelöst und unabhängig verschoben. Dabei können andere Elemente
+              verdeckt werden. Diese verhalten sich so, als ob das Element nicht vorhanden wäre und lassen keinen Platz für das Element. 
             * sticky
             > Eine Mischung zwischen fixed und relative: Das Element wird vom normalen Fluss aus verschoben und hat keinen
               Einfluss auf andere Elemente, solange es sich innerhalb des Viewports befindet. Sobald es sich ausserhalb befindet,
@@ -132,7 +137,8 @@ div > div {
 }
 
 img {
-    width: 100%
+    width: 100%;
+    vertical-align: bottom; /*Geht nur bei Inline/(Inline-block)-Elementen*/
 }
 
 img + span {
@@ -141,7 +147,6 @@ img + span {
     background-color: hsla(160, 60%, 55%, 0.5);
     left: 0;
     bottom: 0;
-    margin-bottom: 4px;
 }
 
 /*
@@ -157,22 +162,21 @@ Verwenden Sie einmal display, und einmal float.
 Grenzen Sie die Texte durch Hintergrundfarben voneinander ab.
 Wie sieht es hier mit der Höhe aus? */
 /*
-Nein, hier ist es nicht möglich bei allen Elementen die gleiche Höhe zu erzwingen. Wird dies versucht brechen die Elemente
-um und werden untereinander angeordent. 
+Es ist durchaus möglich den Articeln die gleiche Höhe zu geben, jedoch wird dann der Text abgeschnitten.
 */
 
 article:nth-child(odd) {
     width: 50%;
     float: left;
     background-color: rgba(0, 100, 0);
-    /* height: 150px; */
+    height: 150px;
 }
 
 article:nth-child(even) {
     width: 50%;
     display: inline-block;
     background-color: rgba(255, 140, 0);
-    /* height: 150px */
+    height: 150px
 }
 
 
