@@ -141,7 +141,7 @@ main > section:nth-child(2) > div {
     border: 1px dotted rgb(169, 169, 169);
 }
 
-main > section:nth-child(2) > div > input {
+main > section:nth-child(2) > div > form > input {
     margin-bottom: 10px;
 }
 
