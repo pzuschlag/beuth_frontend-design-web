@@ -100,12 +100,12 @@
 
             <div>
                 <form>
-                    <span>Name</span>
-                    <input type="text">
-                    <span>E-Mail</span>
-                    <input type="text">
-                    <span>Deine Lieblingsfarbe</span>
-                    <select name="colour">
+                    <label for="input_name">Name</label>
+                    <input id="input_name" type="text">
+                    <label for="input_mail">E-Mail</label>
+                    <input id="input_mail" type="text">
+                    <label for="select_colour">Deine Lieblingsfarbe</label>
+                    <select if="select_colour" name="colour">
                         <option value="" selected disabled hidden>Dropdown</option>
                         <option value="red">Die Roten</option>
                         <option value="blue">Die Blauen</option>
