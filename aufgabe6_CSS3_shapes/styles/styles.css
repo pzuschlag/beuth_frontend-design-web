@@ -20,10 +20,12 @@ body {
     grid-template-areas: "header"
                          "content"
                          "footer";
-    background-color: #ee864a;
+    background-color: tomato;
 }
 
-/* Header */
+/************/
+/** Header **/
+/************/
 
 /* Header - Headline */
 header {
@@ -56,24 +58,25 @@ header > nav > ul {
 
 header > nav > ul > li > a {
     text-decoration: none;
-    color: black;
+    color: rgb(47,79,79);
 }
 
-/* Content */
-main > section:nth-child(1) {
-    background-color: darkslategray;
-}
+/*************/
+/** Content **/
+/*************/
 
+/* Content - Section 1 */
 main > section:nth-child(1) {
     display: flex;
     justify-content: center;
     height: 400px;
-    background: rgb(47,79,79);
+    background-color: rgb(47,79,79);
+    /* background-color: darkslategray; */
 }
 
 main > section:nth-child(1) > div {
     width: 550px;
-    margin-top: 150px;
+    margin-top: 100px;
 }
 
 main > section:nth-child(1) > div > img {
@@ -93,15 +96,14 @@ main > section:nth-child(1) > div > p {
     margin-top: 15px;
 }
 
-
+/* Content - Section 2 */
 main > section:nth-child(2) {
     height: 400px;
-    background-color: darkslategray;
-    background: rgb(47,79,79);
     background: linear-gradient(180deg, rgba(47,79,79,1) 0%, rgba(255,99,71,1) 100%);
 }
 
+/* Content - Section 3 */
 main > section:nth-child(3) {
+    height: 0px;
     background-color: tomato;
-    height: 400px;
 }
