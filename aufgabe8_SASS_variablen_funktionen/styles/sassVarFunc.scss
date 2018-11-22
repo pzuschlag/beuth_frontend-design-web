@@ -1,0 +1,120 @@
+*{
+	box-sizing: border-box;
+}
+
+/*Variablen beginnen mit dem $-Zeichen
+Der scope wird durch den Anweisungsblock gesetzt.
+Variablen können explizit als !global geflaggt werden.*/
+
+$main-font-family: sans-serif;
+$main-color: hsla(0, 0%, 0%, 1);
+$main-background-color: hsla(0, 0%, 80% , 1);
+$section-background-color: hsla(0, 0%, 0% , 1);
+
+html {
+    font-family: $main-font-family;
+    color: $main-color;
+    background: $main-background-color;
+}
+
+/*best-practice für Bezeichner -
+- ist gleich _ */
+
+/*
+string " " oder ' ' oder unquoted
+best-practice ' '
+*/
+
+
+$base-path-images: '../images/';
+$background-images-position: no-repeat right center;
+
+section:first-of-type{
+    background: url($base-path-images + 'gerbera.png')
+    $background-images-position;
+    background-size: contain;
+}
+
+
+/*best-practice für number:
+trenne den Wert von der Einheit.*/
+
+$main-font-size: 16;
+$main-font-in-px: $main-font-size * 1px;
+
+$block-max-width: 780;
+$block-max-width-in-px: $block-max-width *1px; 
+
+section {
+    width: 100%;
+    max-width: $block-max-width-in-px;
+}
+
+
+/*Operationen
++, -, *, /, %
+*/
+
+/*Aufgabe: machen Sie sich kundig zu folgenden Variablen-Themen:
+!global, !default, Interpolation
+Was bedeutet es, wozu wird es benutzt?*/
+
+/***************************************************/
+
+/*functions*/
+
+/*declaration: functions geben immer etwas zurück*/
+
+@function get-base-url() {
+    @return '../images/';
+}
+
+/*invocation*/
+section:last-of-type {
+    background: url(get-base-url()+'anemone.png')
+    $background-images-position;
+}
+
+/*scope: functions können nicht in functions oder mixins deklariert werden*/
+
+/*nützliche built-in-functions für Farben:
+darken(), lighten(), mix()*/
+
+code {
+    font-size: $main-font-in-px;
+}
+
+/*nesting, mehr dazu später*/
+aside {
+    p:first-of-type {
+        $color: hsla(0, 100%, 50%, 1);
+        color: $color;
+        background: lighten($color, 30%)
+    }
+
+    p:last-of-type {
+        $background-color: hsla(240, 100%, 50%, 1);
+        background: $background-color;
+        color: darken($background-color, 40%);
+        border: 2px dashed lighten($background-color, 50%)
+    }
+}
+
+/*parameter: optional*/
+@function multiply($x, $y) {
+    @return $x+$y;
+}
+
+@function multiply-optional($x, $y: 1) {
+    @return $x+$y;
+}
+
+$element-width: 100%;
+
+section {
+    width: multiply-optional($element-width, 0.8);
+    margin: auto;
+}
+
+/*Aufgabe: was sind named arguments?*/
+

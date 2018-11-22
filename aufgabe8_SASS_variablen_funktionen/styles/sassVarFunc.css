@@ -1,0 +1,64 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box; }
+
+/*Variablen beginnen mit dem $-Zeichen
+Der scope wird durch den Anweisungsblock gesetzt.
+Variablen können explizit als !global geflaggt werden.*/
+html {
+  font-family: sans-serif;
+  color: black;
+  background: #cccccc; }
+
+/*best-practice für Bezeichner -
+- ist gleich _ */
+/*
+string " " oder ' ' oder unquoted
+best-practice ' '
+*/
+section:first-of-type {
+  background: url("../images/gerbera.png") no-repeat right center;
+  background-size: contain; }
+
+/*best-practice für number:
+trenne den Wert von der Einheit.*/
+section {
+  width: 100%;
+  max-width: 780px; }
+
+/*Operationen
++, -, *, /, %
+*/
+/*Aufgabe: machen Sie sich kundig zu folgenden Variablen-Themen:
+!global, !default, Interpolation
+Was bedeutet es, wozu wird es benutzt?*/
+/***************************************************/
+/*functions*/
+/*declaration: functions geben immer etwas zurück*/
+/*invocation*/
+section:last-of-type {
+  background: url("../images/anemone.png") no-repeat right center; }
+
+/*scope: functions können nicht in functions oder mixins deklariert werden*/
+/*nützliche built-in-functions für Farben:
+darken(), lighten(), mix()*/
+code {
+  font-size: 16px; }
+
+/*nesting, mehr dazu später*/
+aside p:first-of-type {
+  color: red;
+  background: #ff9999; }
+aside p:last-of-type {
+  background: blue;
+  color: #000033;
+  border: 2px dashed white; }
+
+/*parameter: optional*/
+section {
+  width: 100.8%;
+  margin: auto; }
+
+/*Aufgabe: was sind named arguments?*/
+
+/*# sourceMappingURL=sassVarFunc.css.map */
