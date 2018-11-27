@@ -7,11 +7,15 @@
     font-family: sans-serif;
 }
 
-/* Fonts */
 h1,
 h2 { font-weight: 600; }
 h1 { font-size: 2em; }
 h2 { font-size: 1.5em; }
+
+
+/*************/
+/** General **/
+/*************/
 
 body {
     display: grid;
@@ -81,7 +85,7 @@ main > section:nth-child(1) > div {
 
 main > section:nth-child(1) > div > img {
     float: left;
-    shape-outside: url(img/gerbera.png);
+    shape-outside: url(../img/gerbera.png);
     shape-outside: circle(50%);
     width: 250px;
     height: 250px;
