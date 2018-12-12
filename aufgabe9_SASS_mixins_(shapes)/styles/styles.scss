@@ -11,15 +11,20 @@ $content-section3-height:   0px;
 /***************/
 /** Functions **/
 /***************/
-
 @function lower-opacity($color, $percentage) {
     @return  rgba($color, ($percentage / 100));
 }
 
 /************/
+/** Mixins **/
+/************/
+@mixin bg-gardient-from-top-to-bottom($topColor, $bottomColor) {
+    background: linear-gradient(180deg, $topColor 0%, $bottomColor 100%);
+}
+
+/************/
 /** Styles **/
 /************/
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -47,7 +52,6 @@ body {
 }
 
 /**** Header ****/
-
 /* Header - Headline */
 header {
     display: grid;
@@ -64,7 +68,6 @@ header {
         grid-area: headline;
     }
 }
-
 
 /* Header - Navigation */
 header {
@@ -86,7 +89,6 @@ header {
 }
 
 /**** Content ****/
-
 /* Content - Section 1 */
 main {
     >section {
@@ -125,7 +127,7 @@ main {
 main {
     >section:nth-child(2) {
         height: $content-section2-height;
-        background: linear-gradient(180deg, $content-section1-color 0%, $content-section2-color 100%);
+        @include bg-gardient-from-top-to-bottom($content-section1-color, $content-section2-color);
     }
 }
 
