@@ -5,7 +5,7 @@
   font-style: inherit;
   font-size: 100%;
   font-family: sans-serif;
-  /* border: 1px solid #000; */ }
+  /* @include border-solid; */ }
 
 /* Fonts */
 h1,
