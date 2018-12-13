@@ -38,11 +38,10 @@ header {
     grid-template-rows: auto;
     grid-template-areas: "headline nav";
     padding: 0 50px;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.5);
     position: fixed;
     width: 100%;
     color: rgb(47,79,79);
-    z-index: 1;
 }
 
 header > h1 {
@@ -66,9 +65,37 @@ header > nav > ul > li > a {
     color: rgb(47,79,79);
 }
 
-header > nav > ul > li:nth-child(2) > a {
-    text-shadow: 0px 0px 5px blueviolet;
+
+
+/* Initial Werte*/
+#close{
+	display: none;
 }
+
+body > nav {
+    margin-top: 38px;
+    /* opacity: 0; */
+    height: 0px;
+    /* height: 30px; */
+}
+
+/* transition */
+
+#stay:target #close{
+	display: block;
+}
+
+#stay:target #open{
+	display: none;
+}
+
+
+
+#stay:target body > nav{
+    opacity: 1;
+	transition: 0.5s;
+}
+
 
 /*************/
 /** Content **/
@@ -99,7 +126,6 @@ main > section:nth-child(1) > div > a > img {
     width: 200px;
     margin: 0 0 10px 0;
     border-radius: 10px;
-    position: relative;
 }
 
 /* Content - Section 2 */
@@ -114,30 +140,21 @@ main > section:nth-child(3) {
     background-color: tomato;
 }
 
+/* Media-Query */
+@media (max-width: 800px) {
+
+}
+
+
 /****************/
 /** Animations **/
 /****************/
 
-:target{
-    animation: scaleUp 0.5s ease-in-out 1 normal forwards;
-}
-
-@keyframes scaleUp {
-    from {
-        /* transform: scale(1); */
-        width: 200px;
-    }
-    to {
-        /* transform: scale(2); */
-        width: 400px;
-    }
-}
-
 @keyframes hide {
     from {
-        opacity: 0;
+        display: none;
     }
     to {
-        opacity: 1;
+        display: flex;
     }
 }
