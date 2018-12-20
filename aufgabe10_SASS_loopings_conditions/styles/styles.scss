@@ -145,19 +145,24 @@ main {
 
         ul{
             text-align: center;
-         
+            font-size: 30px;
+            font-weight: bold;
+
+            /* For-Loop */
             @for $i from 1 through 9 {
                 li:nth-child(#{$i}) {
-                    color: lighten($content-section1-color, (5% * $i));
+                    color: darken(lightgreen, (5% * $i));
                 }
-                @warn $i;
             }
+
+            /* Each-Loop */
+            // $map: 1,2,3,4,5,6,7,8,9;
+            // @each $number in $map {
+            //     li:nth-child(#{$number}) {
+            //         color: lighten(green, (5% * $number));
+            //     }
+            // }
+            
         }
     }
 }
-
-/* @warn, @error */
-@warn 'eof';
-
-@debug 'eof';
-// @error 'eof';

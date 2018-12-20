@@ -92,26 +92,28 @@ main > section:nth-child(3) {
   height: 400px;
   background-color: tomato; }
   main > section:nth-child(3) ul {
-    text-align: center; }
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    /* For-Loop */
+    /* Each-Loop */ }
     main > section:nth-child(3) ul li:nth-child(1) {
-      color: #395f5f; }
+      color: #7aeb7a; }
     main > section:nth-child(3) ul li:nth-child(2) {
-      color: #426f6f; }
+      color: #64e764; }
     main > section:nth-child(3) ul li:nth-child(3) {
-      color: #4c7f7f; }
+      color: #4ee44e; }
     main > section:nth-child(3) ul li:nth-child(4) {
-      color: #558f8f; }
+      color: #38e038; }
     main > section:nth-child(3) ul li:nth-child(5) {
-      color: #5f9f9f; }
+      color: #22dd22; }
     main > section:nth-child(3) ul li:nth-child(6) {
-      color: #6ea9a9; }
+      color: #1ec71e; }
     main > section:nth-child(3) ul li:nth-child(7) {
-      color: #7eb2b2; }
+      color: #1bb01b; }
     main > section:nth-child(3) ul li:nth-child(8) {
-      color: #8ebcbc; }
+      color: #189a18; }
     main > section:nth-child(3) ul li:nth-child(9) {
-      color: #9ec5c5; }
-
-/* @warn, @error */
+      color: #148414; }
 
 /*# sourceMappingURL=styles.css.map */
