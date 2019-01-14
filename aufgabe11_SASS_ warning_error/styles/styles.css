@@ -92,7 +92,9 @@ main > section:nth-child(3) {
   height: 400px;
   background-color: tomato; }
   main > section:nth-child(3) ul {
-    text-align: center; }
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold; }
     main > section:nth-child(3) ul li:nth-child(1) {
       color: #395f5f; }
     main > section:nth-child(3) ul li:nth-child(2) {
